@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfBaseClientForWebApi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Main Window" Height="350" Width="525">
+    <Grid>
+        <StackPanel Margin="2">
+            <TextBlock Name="textblockname" 
+                       Margin="182,5,173,5"
+                       Height="91" />
+            <Button x:Name="buttonname"
+                 Width="100" 
+                 Height="24"  
+                 Margin="10"
+                 Content="Ok" 
+                 Foreground="DarkRed" 
+                 FontWeight="Bold" 
+                 FontStyle="Italic" 
+                 FontSize="15" Click="buttonname_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
