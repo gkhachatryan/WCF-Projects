@@ -35,11 +35,11 @@ namespace WpfBaseClientForWebApi
             
             string message = response.Content.ReadAsStringAsync().Result;
            
-            JavaScriptSerializer jss = new JavaScriptSerializer();
+            //JavaScriptSerializer jss = new JavaScriptSerializer();
 
-            string content = jss.Deserialize<string>(message);
+            //string content = jss.Deserialize<string>(message);
 
-            textblockname.Text = content;
+            textblockname.Text = message;
         }
     }
 }
