@@ -17,6 +17,7 @@ namespace WCF
         string PostData(Person info);
     }
 
+    // Sa mer person classna, u ays nuyn class-is WPF-um el ka, vor  ABC keterin bavarari?
     [DataContract]
     public class Person
     {
@@ -30,6 +31,8 @@ namespace WCF
         public int Age { get; set; }
     }
 
+    // pastoren, vor SQl-in lav tirapetenq el nman ognakan classner mez petq chen lini?
+    // stexcum em im ognakan class@, vori mijocov person-neri list em stanalu
     public static class PersonDataClass
     {
         public static List<Person> list = new List<Person>();
