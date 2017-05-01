@@ -10,22 +10,17 @@ namespace WCF
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class Service1 : IService1
     {
-        public string GetData(int value)
+        
+        public IEnumerable<Person> GetData()
         {
-            return string.Format("You entered: {0}", value);
+            return PersonDataClass.list;
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public string PostData(Person info)
         {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            PersonDataClass.list.Add(info);
+
+            return info.Name + "  added to list";
         }
     }
 }

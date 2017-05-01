@@ -8,25 +8,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApiClinetForWCF.ServiceReference1 {
+namespace WebApiclient.ServiceReference1 {
     using System.Runtime.Serialization;
     using System;
     
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CompositeType", Namespace="http://schemas.datacontract.org/2004/07/WCF")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Person", Namespace="http://schemas.datacontract.org/2004/07/WCF")]
     [System.SerializableAttribute()]
-    public partial class CompositeType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class Person : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool BoolValueField;
+        private int AgeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StringValueField;
+        private int IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -39,27 +42,40 @@ namespace WebApiClinetForWCF.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool BoolValue {
+        public int Age {
             get {
-                return this.BoolValueField;
+                return this.AgeField;
             }
             set {
-                if ((this.BoolValueField.Equals(value) != true)) {
-                    this.BoolValueField = value;
-                    this.RaisePropertyChanged("BoolValue");
+                if ((this.AgeField.Equals(value) != true)) {
+                    this.AgeField = value;
+                    this.RaisePropertyChanged("Age");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StringValue {
+        public int ID {
             get {
-                return this.StringValueField;
+                return this.IDField;
             }
             set {
-                if ((object.ReferenceEquals(this.StringValueField, value) != true)) {
-                    this.StringValueField = value;
-                    this.RaisePropertyChanged("StringValue");
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
                 }
             }
         }
@@ -79,25 +95,25 @@ namespace WebApiClinetForWCF.ServiceReference1 {
     public interface IService1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        string GetData(int value);
+        WebApiclient.ServiceReference1.Person[] GetData();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        System.Threading.Tasks.Task<string> GetDataAsync(int value);
+        System.Threading.Tasks.Task<WebApiclient.ServiceReference1.Person[]> GetDataAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
-        WebApiClinetForWCF.ServiceReference1.CompositeType GetDataUsingDataContract(WebApiClinetForWCF.ServiceReference1.CompositeType composite);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/PostData", ReplyAction="http://tempuri.org/IService1/PostDataResponse")]
+        string PostData(WebApiclient.ServiceReference1.Person info);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<WebApiClinetForWCF.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(WebApiClinetForWCF.ServiceReference1.CompositeType composite);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/PostData", ReplyAction="http://tempuri.org/IService1/PostDataResponse")]
+        System.Threading.Tasks.Task<string> PostDataAsync(WebApiclient.ServiceReference1.Person info);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IService1Channel : WebApiClinetForWCF.ServiceReference1.IService1, System.ServiceModel.IClientChannel {
+    public interface IService1Channel : WebApiclient.ServiceReference1.IService1, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class Service1Client : System.ServiceModel.ClientBase<WebApiClinetForWCF.ServiceReference1.IService1>, WebApiClinetForWCF.ServiceReference1.IService1 {
+    public partial class Service1Client : System.ServiceModel.ClientBase<WebApiclient.ServiceReference1.IService1>, WebApiclient.ServiceReference1.IService1 {
         
         public Service1Client() {
         }
@@ -118,20 +134,20 @@ namespace WebApiClinetForWCF.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public string GetData(int value) {
-            return base.Channel.GetData(value);
+        public WebApiclient.ServiceReference1.Person[] GetData() {
+            return base.Channel.GetData();
         }
         
-        public System.Threading.Tasks.Task<string> GetDataAsync(int value) {
-            return base.Channel.GetDataAsync(value);
+        public System.Threading.Tasks.Task<WebApiclient.ServiceReference1.Person[]> GetDataAsync() {
+            return base.Channel.GetDataAsync();
         }
         
-        public WebApiClinetForWCF.ServiceReference1.CompositeType GetDataUsingDataContract(WebApiClinetForWCF.ServiceReference1.CompositeType composite) {
-            return base.Channel.GetDataUsingDataContract(composite);
+        public string PostData(WebApiclient.ServiceReference1.Person info) {
+            return base.Channel.PostData(info);
         }
         
-        public System.Threading.Tasks.Task<WebApiClinetForWCF.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(WebApiClinetForWCF.ServiceReference1.CompositeType composite) {
-            return base.Channel.GetDataUsingDataContractAsync(composite);
+        public System.Threading.Tasks.Task<string> PostDataAsync(WebApiclient.ServiceReference1.Person info) {
+            return base.Channel.PostDataAsync(info);
         }
     }
 }

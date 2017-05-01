@@ -1,4 +1,4 @@
-﻿<Application x:Class="WpfBaseClientForWebApi.App"
+﻿<Application x:Class="WPFMain.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="MainWindow.xaml">

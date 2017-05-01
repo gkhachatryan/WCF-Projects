@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{7FBEEE3E-3711-474D-B016-F8E3E773FD10}</ProjectGuid>
+    <ProjectGuid>{38CC039D-2518-4520-BC83-D03EA1C51A0F}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebApiClinetForWCF</RootNamespace>
-    <AssemblyName>WebApiClinetForWCF</AssemblyName>
+    <RootNamespace>WebApiclient</RootNamespace>
+    <AssemblyName>WebApiclient</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -82,7 +82,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Web.config" />
-    <Content Include="Service References\ServiceReference1\WebApiClinetForWCF.ServiceReference1.CompositeType.datasource">
+    <Content Include="Service References\ServiceReference1\WebApiclient.ServiceReference1.Person.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
   </ItemGroup>
@@ -141,9 +141,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50966</DevelopmentServerPort>
+          <DevelopmentServerPort>57393</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50966/</IISUrl>
+          <IISUrl>http://localhost:57393/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

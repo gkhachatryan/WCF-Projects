@@ -7,39 +7,40 @@ using System.Text;
 
 namespace WCF
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
     [ServiceContract]
     public interface IService1
     {
         [OperationContract]
-        string GetData(int value);
+        IEnumerable<Person> GetData();
 
         [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
-
-        // TODO: Add your service operations here
+        string PostData(Person info);
     }
 
-    // Use a data contract as illustrated in the sample below to add composite types to service operations.
-    // You can add XSD files into the project. After building the project, you can directly use the data types defined there, with the namespace "WCF.ContractType".
     [DataContract]
-    public class CompositeType
+    public class Person
     {
-        bool boolValue = true;
-        string stringValue = "Hello ";
+        [DataMember]
+        public int ID { get; set; }
 
         [DataMember]
-        public bool BoolValue
-        {
-            get { return boolValue; }
-            set { boolValue = value; }
-        }
+        public string Name { get; set; }
 
         [DataMember]
-        public string StringValue
+        public int Age { get; set; }
+    }
+
+    public static class PersonDataClass
+    {
+        public static List<Person> list = new List<Person>();
+
+        static PersonDataClass()
         {
-            get { return stringValue; }
-            set { stringValue = value; }
+            list.Add(new Person() { ID = 1, Name = "Teacher Tigran", Age = 18 });
+            list.Add(new Person() { ID = 2, Name = "Van", Age = 18 });
+            list.Add(new Person() { ID = 3, Name = "Lusine", Age = 18 });
+            list.Add(new Person() { ID = 4, Name = "Tsovinar", Age = 18 });
+            list.Add(new Person() { ID = 5, Name = "Narek", Age = 18 });
         }
     }
 }

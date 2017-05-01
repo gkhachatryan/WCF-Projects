@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WebApiClinetForWCF")]
+[assembly: AssemblyTitle("WebApiclient")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WebApiClinetForWCF")]
+[assembly: AssemblyProduct("WebApiclient")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("858e26b4-366c-4620-928c-7df3cceb5384")]
+[assembly: Guid("982dae42-035c-4055-b33c-c379724c95d6")]
 
 // Version information for an assembly consists of the following four values:
 //

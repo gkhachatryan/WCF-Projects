@@ -1,0 +1,49 @@
+﻿<Window x:Class="WPFMain.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="F12" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" >
+            
+            <Button  Name="GetName"
+                Content=" Get all Person"
+                Margin="10" Height="29" Click="GetName_Click" />
+
+            <ListBox   Margin="10"
+                 Name="personlistname"
+                 Height="240"/>
+            
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Margin="5,54,5,5" Orientation="Vertical">
+
+            <StackPanel Margin="2"  Orientation="Horizontal">
+                <TextBlock Margin="2 2 10 2" > Person ID</TextBlock>
+                <TextBox Name="textboxID" 
+                         Width="40" 
+                         Margin="2 2 10 2"/>
+            </StackPanel>
+
+            <StackPanel  Margin="2" Orientation="Horizontal">
+                <TextBlock Margin="2 2 28 2">Name</TextBlock>
+                <TextBox Name="textboxName" Width="100" Margin="2 2 10 2"></TextBox>
+            </StackPanel>
+
+            <StackPanel  Margin="2" Orientation="Horizontal">
+                <TextBlock Margin="2 2 39 2">Age</TextBlock>
+                <TextBox Name="textboxAge" Width="40" Margin="2 2 10 2"></TextBox>
+            </StackPanel>
+
+            <StackPanel  Margin="2" >
+                <Button Grid.Column="0" Grid.Row="0"
+                Name="Create" Content="Create New Person" Margin="5" Width="150" Height="25" Click="Create_Click"  ></Button>
+            </StackPanel>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
