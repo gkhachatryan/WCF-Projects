@@ -82,6 +82,11 @@ namespace WPFMain
             MessageBox.Show(jss.Deserialize<string>(msg));
         }
 
+        private void Update_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         // Person class-na
         public class Person
         {
@@ -90,5 +95,6 @@ namespace WPFMain
             public int Age { get; set; }
         }
 
+       
     }
 }

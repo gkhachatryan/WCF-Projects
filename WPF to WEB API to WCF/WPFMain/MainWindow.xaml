@@ -43,6 +43,11 @@
                 Name="Create" Content="Create New Person" Margin="5" Width="150" Height="25" Click="Create_Click"  ></Button>
             </StackPanel>
 
+            <StackPanel  Margin="2" >
+                <Button Grid.Column="0" Grid.Row="0"
+                Name="Update" Content="Update list" Margin="5" Width="150" Height="25" Click="Update_Click"  ></Button>
+            </StackPanel>
+
         </StackPanel>
 
     </Grid>

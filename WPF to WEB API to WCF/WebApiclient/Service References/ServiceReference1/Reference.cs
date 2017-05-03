@@ -105,6 +105,12 @@ namespace WebApiclient.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/PostData", ReplyAction="http://tempuri.org/IService1/PostDataResponse")]
         System.Threading.Tasks.Task<string> PostDataAsync(WebApiclient.ServiceReference1.Person info);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/PutData", ReplyAction="http://tempuri.org/IService1/PutDataResponse")]
+        string PutData(WebApiclient.ServiceReference1.Person info);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/PutData", ReplyAction="http://tempuri.org/IService1/PutDataResponse")]
+        System.Threading.Tasks.Task<string> PutDataAsync(WebApiclient.ServiceReference1.Person info);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -148,6 +154,14 @@ namespace WebApiclient.ServiceReference1 {
         
         public System.Threading.Tasks.Task<string> PostDataAsync(WebApiclient.ServiceReference1.Person info) {
             return base.Channel.PostDataAsync(info);
+        }
+        
+        public string PutData(WebApiclient.ServiceReference1.Person info) {
+            return base.Channel.PutData(info);
+        }
+        
+        public System.Threading.Tasks.Task<string> PutDataAsync(WebApiclient.ServiceReference1.Person info) {
+            return base.Channel.PutDataAsync(info);
         }
     }
 }

@@ -27,5 +27,11 @@ namespace WCF
             // Veradardzuma string vor amen lava, avelacrel em, ete iharke 19-rd toxum bug chi linum 
             return info.Name + "  added to list";
         }
+
+
+        public string PutData(Person info)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

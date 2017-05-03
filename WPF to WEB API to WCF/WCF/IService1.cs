@@ -15,6 +15,9 @@ namespace WCF
 
         [OperationContract]
         string PostData(Person info);
+
+        [OperationContract]
+        string PutData(Person info);
     }
 
     // Sa mer person classna, u ays nuyn class-is WPF-um el ka, vor  ABC keterin bavarari?

@@ -42,7 +42,11 @@ namespace WebApiclient.Controllers
             {
                 return BadRequest();
             }
+        }
 
+        public IHttpActionResult Put(int id, [FromBody]Person info)
+        {
+                      
         }
     }
 }
