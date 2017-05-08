@@ -84,7 +84,17 @@ namespace WPFMain
 
         private void Update_Click(object sender, RoutedEventArgs e)
         {
+            HttpClient client = new HttpClient();
 
+            Person person = new Person { ID = int.Parse(textboxID.Text), Name = textboxName.Text, Age = int.Parse(textboxAge.Text) };
+
+            HttpResponseMessage responce = client.PutAsync(@"http://localhost:57393/api/main", person, new JsonMediaTypeFormatter()).Result;
+
+            string msg = responce.Content.ReadAsStringAsync().Result;
+
+            JavaScriptSerializer jss = new JavaScriptSerializer();
+
+            MessageBox.Show(jss.Deserialize<string>(msg));
         }
 
         // Person class-na

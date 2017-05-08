@@ -31,7 +31,21 @@ namespace WCF
 
         public string PutData(Person info)
         {
-            throw new NotImplementedException();
+            bool flag = false;
+
+            foreach (var item in PersonDataClass.list)
+            {
+                if (item.ID == info.ID)
+                {
+                    item.Name = info.Name;
+                    item.Age = info.Age;
+                    flag = true;
+                    break;
+                }
+
+            }
+            return flag ? "Successfully updated Person with ID " + info.ID : "No Person with id " + info.ID;
+
         }
     }
 }
