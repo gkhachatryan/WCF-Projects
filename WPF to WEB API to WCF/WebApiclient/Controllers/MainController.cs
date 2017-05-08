@@ -44,9 +44,9 @@ namespace WebApiclient.Controllers
             }
         }
 
-        public IHttpActionResult Put(int id, [FromBody]Person info)
+        public IHttpActionResult Put([FromBody]Person info)
         {
-            string responce = wcfclinet.PostDataAsync(info).Result;
+            string responce = wcfclinet.PutDataAsync(info).Result;
 
             //  wpf-in asum em amen inch lava @ntacel te voch
             if (responce != null)
